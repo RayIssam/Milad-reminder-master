@@ -3,7 +3,7 @@ let wakingUpStatu=['late','not-late','late','late','late','not-late',
                     'not-late','not-late','not-late','not-late','late','late','late','late',
                     'not-late','not-late','not-late','late','late','not-late']
 
-let dayStatus=['offday', 'workday','“workday', 'workday', 'workday','offday','offday', 
+let dayStatus=['offday', 'workday','workday', 'workday', 'workday','offday','offday', 
                  'offday','workday','workday', 'workday', 'workday', 'workday',
                 'offday', 'offday', 'workday', 'workday', 'workday', 'workday','offday']
 
@@ -38,7 +38,6 @@ let emergencyStatus = ['critical1' ,'non-critcal','non-critcal','critical3','non
    function salarDeduction() {
     let miladSalary =1000;
     document.querySelector("table").innerHTML="";
-
 
     let table = document.getElementById("table");
 
@@ -134,15 +133,16 @@ if its work day but not late OR if it's an offday : the li element remains empty
 */
 function miladProgram (){
     document.querySelector("#work-days").innerHTML="";
-    for(let k=1;k<dayStatus.length+1;k++){
+    for(let k=0;k<dayStatus.length;k++){
+        console.log(k)
         let listItem = document.createElement("li");
         document.getElementById("work-days").append(listItem);
-        if(wakingUpStatu[k]=="late" && dayStatus[k]=='workday'){
-            listItem.innerHTML="Day " + k + " : "+ randomMessage(lateMessages) + "<br>"
+        if(wakingUpStatu[k]==="late" && dayStatus[k]==="workday"){
+            listItem.innerHTML="Day " + (k+1) + " : "+ randomMessage(lateMessages) + "<br>"
             listItem.className='message-sent workday'
         }
         else{
-            listItem.innerHTML="Day " + k + " : "+" ";
+            listItem.innerHTML="Day " + (k+1) + " : "+" ";
             listItem.className='message-not-sent offday';
         }
     }
