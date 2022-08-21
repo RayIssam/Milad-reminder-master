@@ -23,7 +23,6 @@ let emergencyStatus = ['critical1' ,'non-critcal','non-critcal','critical3','non
  const critical2 = { action : 200,}
  const critical3 = {action : 180,}
  const critical4 = {action : 500 }
- let miladSalary =1000;
 
 
                     //click event listener 
@@ -37,6 +36,7 @@ let emergencyStatus = ['critical1' ,'non-critcal','non-critcal','critical3','non
     }
 
    function salarDeduction() {
+    let miladSalary =1000;
     document.querySelector("table").innerHTML="";
 
 
