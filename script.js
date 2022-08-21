@@ -25,9 +25,9 @@ let emergencyStatus = ['critical1' ,'non-critcal','non-critcal','critical3','non
  const critical4 = {action : 500 }
 
 
-                    //click event listener 
+  //click event listener 
    document.getElementById("button").addEventListener("click", miladProgram);
-   document.getElementById("get-report").addEventListener("click",salarDeduction)
+   document.getElementById("get-report").addEventListener("click",salaryDeduction)
    document.getElementById("reset").addEventListener("click",reset)
 
     function reset(){
@@ -35,7 +35,7 @@ let emergencyStatus = ['critical1' ,'non-critcal','non-critcal','critical3','non
         document.getElementById("table").innerHTML="";
     }
 
-   function salarDeduction() {
+   function salaryDeduction() {
     let miladSalary =1000;
     document.querySelector("table").innerHTML="";
 
