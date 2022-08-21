@@ -1,12 +1,14 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    overflow-x: hidden
+    overflow-x: hidden;
+
   }
+  
   body{
     font-family: 'Nunito Sans', sans-serif ;
-    color: white ;
     background: linear-gradient(#e66465, #9198e5);
+    color: white ;
     margin: 0 auto ;
     max-width: 100% ;
     overflow-x: hidden ;
@@ -36,6 +38,7 @@ button{
     font-family: 'Nunito Sans', sans-serif ;
     font-size: 20px;
     margin: 20px;
+    cursor: pointer;
    
 
 
@@ -71,5 +74,10 @@ td {
   padding: 20px;
   border: 1px white solid;
   text-align: center;
+}
+
+tr:first-of-type{
+  background-color: #bcb7e5;
+  color:black
 }
 
